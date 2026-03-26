@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Statistički podaci o udjelu filmskih žanrova i država podrijetla prikazani kroz grafikone.">
+    <link rel="stylesheet" href="grafikon.css">
+    <title>Statistics | Movie Archives</title>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <h1>🎬 Movie Archives</h1>
+        </div>
+        <nav aria-label="Glavni izbornik" class="top-nav"> 
+            <ul> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="grafikon.html">Statistics</a></li>
+                <li><a href="slike.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="table-container desktop-only">
+            <h2>Udio žanrova (Pie Chart)</h2>
+            <div class="chart-wrapper">
+                <div class="pie-chart-container">
+                    <div class="segment drama" data-info="Drama: 40%"></div>
+                    <div class="segment comedy" data-info="Komedija: 30%"></div>
+                    <div class="segment other" data-info="Ostalo: 30%"></div>
+                </div>
+                <div class="chart-legend">
+                    <div class="legend-item"><span class="dot d-blue"></span> Drama</div>
+                    <div class="legend-item"><span class="dot m-blue"></span> Komedija</div>
+                    <div class="legend-item"><span class="dot gray"></span> Ostalo</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="table-container mobile-only">
+            <h2>Broj filmova po državi (Histogram)</h2>
+            <div class="histogram-container">
+                <div class="bar-group">
+                    <div class="bar-label">SAD</div>
+                    <div class="bar-wrapper">
+                        <div class="bar-fill" style="--val: 85%;" data-info="15 Filmova"></div>
+                    </div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar-label">Italija</div>
+                    <div class="bar-wrapper">
+                        <div class="bar-fill" style="--val: 45%;" data-info="8 Filmova"></div>
+                    </div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar-label">Francuska</div>
+                    <div class="bar-wrapper">
+                        <div class="bar-fill" style="--val: 30%;" data-info="5 Filmova"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026. Web Programiranje. Sva prava pridržana.</p>
+    </footer>
+
+</body>
+</html>
