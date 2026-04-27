@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hr"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arhiva i popis najboljih svjetskih filmova">
+    <link rel="stylesheet" href="style.css">
+    <title>Home | Movie Archives</title>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <h1>🎬 Movie Archives</h1>
+        </div>
+        <nav aria-label="Glavni izbornik" class="top-nav"> 
+            <ul> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="grafikon.html">Statistics</a></li>
+                <li><a href="/slike">Dynamic Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="table-container" aria-labelledby="naslov-tablice">
+            <h2 id="naslov-tablice">Popis Filmova</h2>
+
+            <div class="filters-wrapper">
+                <div class="filter-group">
+                    <label for="search-title">Pretraži naslov:</label>
+                    <input type="text" id="search-title" placeholder="Upišite naslov...">
+                </div>
+
+                <div class="filter-group">
+                    <label for="rating-range">Min. ocjena: <span id="rating-value">0</span></label>
+                    <input type="range" id="rating-range" min="0" max="10" step="0.1" value="0">
+                </div>
+
+                <div class="filter-group">
+                    <label>Država:</label>
+                    <div class="radio-options">
+                        <label><input type="radio" name="country-filter" value="all" checked> Sve</label>
+                        <label><input type="radio" name="country-filter" value="USA"> USA</label>
+                        <label><input type="radio" name="country-filter" value="other"> Ostalo</label>
+                    </div>
+                </div>
+                
+                <button id="btn-filter" class="btn-shine">Filtriraj</button>
+            </div>
+
+            <div class="scroll-wrapper">
+                <table class="modern-table" id="movie-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Naslov</th>
+                            <th>Godina</th>
+                            <th>Žanr</th>
+                            <th>Trajanje (min)</th>
+                            <th>Država</th>
+                            <th>Ocjena</th>
+                            <th>Akcija</th> </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+        <aside class="sidebar" aria-label="Dodatne informacije">
+            <div class="card kosarica-container">
+                <h3>🛒 Moja Košarica (<span id="kosarica-count">0</span>)</h3>
+                <ul id="popis-kosarice" class="kosarica-list">
+                    </ul>
+                <div id="kosarica-akcije" style="display:none;">
+                    <hr style="border: 0.5px solid #2a2a2a; margin: 15px 0;">
+                    <button id="btn-potvrdi" class="btn-shine" style="width: 100%;">Potvrdi posudbu</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Izdvojeni Poster</h3>
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=600" 
+                         alt="Filmski set" class="img-desktop">
+                    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400" 
+                         alt="Filmska klapa" class="img-mobile">
+                </div>
+                <p>Neki od najpoznatijih klasika svjetske kinematografije na jednom mjestu.</p>
+                <a href="grafikon.html" class="btn-link">
+                    <button class="btn-shine">More Info</button>
+                </a>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026. Web Programiranje. Sva prava pridržana.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
